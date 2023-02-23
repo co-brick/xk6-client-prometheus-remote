@@ -276,7 +276,7 @@ func (c *Client) send(state *lib.State, req []byte) (httpext.Response, error) {
 	r.Header.Add("Content-Encoding", "snappy")
 	r.Header.Set("Content-Type", "application/x-protobuf")
 	r.Header.Set("User-Agent", c.cfg.UserAgent)
-	r.Header.Set("X-Prometheus-Remote-Write-Version", "0.0.2")
+	r.Header.Set("X-Prometheus-Remote-Write-Version", "0.1.0")
 	if c.cfg.TenantName != "" {
 		r.Header.Set("X-Scope-OrgID", c.cfg.TenantName)
 	}
